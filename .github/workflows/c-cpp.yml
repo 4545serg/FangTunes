@@ -1,23 +1,34 @@
-name: C/C++ CI
+name: Build FangTunes
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+push:
+branches: ["main"]
+pull_request:
+branches: ["main"]
+workflow_dispatch:
 
 jobs:
-  build:
+build:
+runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+container:
+image: devkitpro/devkitarm:latest
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+- name: Configure Git
+run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+- name: Build FangTunes
+run: make
+
+- name: Upload 3DS files
+uses: actions/upload-artifact@v4
+with:
+name: FangTunes-3DS
+path: |
+fangtune.3dsx
+fangtune.smdh
+fangtune.elf
