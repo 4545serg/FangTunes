@@ -1,0 +1,44 @@
+BasicInfo:
+  Title                   : "FangTune"
+  CompanyCode             : "00"
+  ProductCode             : "CTR-N-FTUN"
+  ContentType             : Application
+  Logo                    : Homebrew
+
+Option:
+  UseOnSD                 : true
+  FreeProductCode         : true
+  EnableCompress          : true
+  MediaFootPadding        : true
+
+AccessControlInfo:
+  CoreVersion             : 2
+  DescVersion             : 2
+  MemoryType              : Application
+  SystemMode              : 64MB
+  IdealProcessor          : 0
+  AffinityMask            : 1
+  Priority                : 1
+  MaxCpu                  : 0x9E
+  HandleTableSize         : 0x200
+  DisableSVC              : false
+  DisableExceptionHandling: false
+  EnableL2Cache           : true
+  ServiceAccessControl:
+    - "cfg:u"
+    - "hid:user"
+    - "ir:user"
+    - "ndm:u"
+    - "ptm:u"
+    - "ndm:s"
+    - "gsp::Lcd"
+    - "gsp::Gpu"
+    - "dsp::DSP"
+    - "sdmc:"
+    - "fs:USER"
+    - "mic:u"
+    - "cecd:u"
+
+SystemControlInfo:
+  SaveDataSize: 0KB
+  RemovableMediaAccess: true

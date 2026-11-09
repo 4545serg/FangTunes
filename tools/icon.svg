@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d16"/>
+      <stop offset="0.55" stop-color="#0a1a18"/>
+      <stop offset="1" stop-color="#0e2f22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#2ed573" stop-opacity="0.30"/>
+      <stop offset="0.55" stop-color="#2ed573" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#2ed573" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="head" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#6bffa3"/>
+      <stop offset="0.35" stop-color="#3ee07f"/>
+      <stop offset="0.8" stop-color="#17b365"/>
+      <stop offset="1" stop-color="#0d8f4e"/>
+    </linearGradient>
+    <linearGradient id="headSide" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a3d22" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#0a3d22" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fang" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.8" stop-color="#f2f4ea"/>
+      <stop offset="1" stop-color="#cfd6c6"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- icon plate -->
+  <rect x="0" y="0" width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="224" fill="url(#glow)"/>
+  <rect x="18" y="18" width="988" height="988" rx="208" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="3"/>
+
+  <!-- headphones: headband -->
+  <path d="M 210 470 C 210 275 340 160 512 160 C 684 160 814 275 814 470"
+        fill="none" stroke="#0b111c" stroke-width="86" stroke-linecap="round"/>
+  <path d="M 210 470 C 210 275 340 160 512 160 C 684 160 814 275 814 470"
+        fill="none" stroke="#3a4658" stroke-width="46" stroke-linecap="round"/>
+  <path d="M 246 452 C 250 295 360 206 512 206 C 664 206 774 295 778 452"
+        fill="none" stroke="#5b6a80" stroke-width="12" stroke-linecap="round" opacity="0.65"/>
+
+  <!-- headphones: ear cups -->
+  <g filter="url(#drop)">
+    <rect x="142" y="392" width="158" height="268" rx="76" fill="#0b111c"/>
+    <rect x="142" y="392" width="158" height="268" rx="76" fill="none" stroke="#3a4658" stroke-width="12"/>
+    <rect x="170" y="424" width="102" height="204" rx="51" fill="#1a2331"/>
+    <rect x="190" y="448" width="62" height="156" rx="31" fill="none" stroke="#2ed573" stroke-width="10" opacity="0.9"/>
+  </g>
+  <g filter="url(#drop)">
+    <rect x="724" y="392" width="158" height="268" rx="76" fill="#0b111c"/>
+    <rect x="724" y="392" width="158" height="268" rx="76" fill="none" stroke="#3a4658" stroke-width="12"/>
+    <rect x="752" y="424" width="102" height="204" rx="51" fill="#1a2331"/>
+    <rect x="772" y="448" width="62" height="156" rx="31" fill="none" stroke="#2ed573" stroke-width="10" opacity="0.9"/>
+  </g>
+
+  <!-- snake head -->
+  <g filter="url(#drop)">
+    <path d="M 512 216
+             C 646 216 736 306 736 424
+             C 736 520 700 594 650 638
+             C 610 672 562 684 512 684
+             C 462 684 414 672 374 638
+             C 324 594 288 520 288 424
+             C 288 306 378 216 512 216 Z"
+          fill="url(#head)" stroke="#082e1b" stroke-width="16"/>
+    <path d="M 512 216
+             C 646 216 736 306 736 424
+             C 736 520 700 594 650 638
+             C 610 672 562 684 512 684
+             C 462 684 414 672 374 638
+             C 324 594 288 520 288 424
+             C 288 306 378 216 512 216 Z"
+          fill="url(#headSide)"/>
+  </g>
+
+  <!-- brow ridges -->
+  <path d="M 356 336 C 396 310 452 316 486 348" fill="none" stroke="#0a3d22" stroke-width="26" stroke-linecap="round"/>
+  <path d="M 668 336 C 628 310 572 316 538 348" fill="none" stroke="#0a3d22" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <g>
+    <ellipse cx="428" cy="400" rx="64" ry="58" fill="#f7f8ea"/>
+    <ellipse cx="596" cy="400" rx="64" ry="58" fill="#f7f8ea"/>
+    <ellipse cx="428" cy="400" rx="17" ry="52" fill="#08120e"/>
+    <ellipse cx="596" cy="400" rx="17" ry="52" fill="#08120e"/>
+    <circle cx="410" cy="380" r="12" fill="#ffffff" opacity="0.9"/>
+    <circle cx="578" cy="380" r="12" fill="#ffffff" opacity="0.9"/>
+    <path d="M 364 386 C 388 356 470 356 492 390" fill="none" stroke="#0b3b22" stroke-width="9" opacity="0.55"/>
+    <path d="M 660 386 C 636 356 554 356 532 390" fill="none" stroke="#0b3b22" stroke-width="9" opacity="0.55"/>
+  </g>
+
+  <!-- nostrils -->
+  <ellipse cx="478" cy="492" rx="12" ry="9" fill="#0a3d22" opacity="0.9" transform="rotate(-18 478 492)"/>
+  <ellipse cx="546" cy="492" rx="12" ry="9" fill="#0a3d22" opacity="0.9" transform="rotate(18 546 492)"/>
+
+  <!-- mouth cavity -->
+  <path d="M 336 548
+           C 404 624 620 624 688 548
+           C 648 702 376 702 336 548 Z"
+        fill="#1a0b14" stroke="#082e1b" stroke-width="10"/>
+
+  <!-- inner throat shadow -->
+  <path d="M 392 578 C 438 630 586 630 632 578 C 620 664 404 664 392 578 Z"
+        fill="#2c0a17" opacity="0.8"/>
+
+  <!-- forked tongue -->
+  <path d="M 512 664 L 512 618 M 512 618 L 486 580 M 512 618 L 538 580"
+        fill="none" stroke="#e8506e" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 512 654 L 512 622" fill="none" stroke="#ff90a6" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- fangs -->
+  <path d="M 404 566 L 462 574 L 438 662 Z" fill="url(#fang)" stroke="#b9c2b2" stroke-width="4"/>
+  <path d="M 620 566 L 562 574 L 586 662 Z" fill="url(#fang)" stroke="#b9c2b2" stroke-width="4"/>
+
+  <!-- upper lip highlight -->
+  <path d="M 356 560 C 418 606 606 606 668 560" fill="none" stroke="#0a3d22" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- tiny scales -->
+  <g fill="#0a3d22" opacity="0.18">
+    <circle cx="406" cy="300" r="9"/>
+    <circle cx="446" cy="278" r="7"/>
+    <circle cx="512" cy="264" r="9"/>
+    <circle cx="578" cy="278" r="7"/>
+    <circle cx="618" cy="300" r="9"/>
+  </g>
+</svg>
